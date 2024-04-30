@@ -11,6 +11,5 @@ $filecount = $files.Count
 $randomChoice = Get-Random -Minimum 1 -Maximum $fileCount
 
 # Chooses and prints the game chosen
-$filesArray = New-Object files.ArrayList
-$gameChosen = $filesArray[$randomChoice];
+$gameChosen = $files[$randomChoice];
 Write-Output "Your random game is $gameChosen"

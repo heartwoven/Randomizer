@@ -13,7 +13,10 @@ $randomChoice = Get-Random -Minimum 1 -Maximum $fileCount
 # Chooses and prints the random game
 
 $fileChosen = $files[$randomChoice];
-$gameChosen = $filechosen -replace "*.*", ""
+$gameChosen = $filechosen -replace "\..*", "."
 Write-Output "Your random game is $gameChosen"
 
 # Moves the game to chosen game folder
+$filePath = $fileChosen.FullName
+$destinationDirectory = "C:\Users\fffff\Downloads\Games\Chosen Games"
+Move-Item -Path $filePath -Destination $destinationDirectory
